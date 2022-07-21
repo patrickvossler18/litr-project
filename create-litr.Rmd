@@ -1357,15 +1357,36 @@ test_litr <- function(install_old, location_of_new) {
   # need this to handle devtools::install's switch to using pkgload::unregister
   # instead of pkgload::unload devtools@v2.4.4
   pkgload::unload("litr")
-  out <- devtools::test(location_of_new)
+  raw_test_results <- devtools::test(location_of_new, reporter = testthat::ListReporter)
+  
+  
+  
+  test_results_parsed <- raw_test_results |>
+  dplyr::as_tibble() |>
+  dplyr::rename(Test = test) |>
+  dplyr::group_by(file, context, Test) |>
+  dplyr::summarise(NumTests = dplyr::first(nb),
+            Passed   = sum(passed),
+            Failed   = sum(failed),
+            Warnings = sum(warning),
+            Errors   = sum(as.numeric(error)),
+            Skipped  = sum(as.numeric(skipped)),
+            .groups = "drop")
+  # out <- test_results_parsed %>% dplyr::summarise_if(is.numeric, sum)
+  test_results_nested <- test_results_parsed |>
+  dplyr::nest_by(file, context, .key = "Results") |>
+  dplyr::nest_by(file, .key = "Categories")
+  
   install_old()
-  return(out)
+  
+  return(test_results_nested)
 }
 ```
 
-We need to use `pkgload` to avoid a bug caused by how `devtools::install` unloads a package.
+We need to use `pkgload` to avoid a bug caused by how `devtools::install` unloads a package and we use `dplyr` for parsing the test output.
 ```{r}
 usethis::use_package("pkgload")
+usethis::use_package("dplyr")
 ```
 
 
@@ -1544,7 +1565,7 @@ We finish by running commands that will document and test `litr`.
 
 We download the latest release:
 
-```{r}
+```{r, results='asis'}
 # need to comment this out to handle devtools::install's switch to using pkgload::unregister
 # instead of pkgload::unload as of devtools@v2.4.4
 # rm(list = ls())
@@ -1552,8 +1573,24 @@ litr::document()
 install_old <- function() {
   remotes::install_github("jacobbien/litr-project@*release", subdir = "litr")
 }
-xfun::Rscript_call(test_litr,
+# we need to do some work to parse the test results
+write_cat_results <- function(category, tests, ...) {
+  cat("####", category, "\n")
+  print(knitr::kable(tests))
+}
+write_file_results <- function(file, categories, ...) {
+  cat("###", file, "\n")
+  purrr::pwalk(list(categories$context, categories$Results), write_cat_results)
+}
+write_results <- function(res) {
+  purrr::pwalk(list(res$file, res$Categories), write_file_results)
+}
+  
+test_results <- xfun::Rscript_call(test_litr,
                    list(install_old = install_old, location_of_new = "."))
+
+write_results(test_results)
+
 ```
 
 ## Add examples folder with the output of knitting each example
@@ -1577,7 +1614,7 @@ build_all_templates <- function(install_old, location_of_new) {
     pkg_name <- rmarkdown::yaml_front_matter(tmp_file)$params$package_name
     rmd_file <- file.path(example_dir, paste0("create-", pkg_name, ".Rmd"))
     fs::file_move(tmp_file, rmd_file)
-    litr::render(rmd_file)
+    render(rmd_file)
     # move to a template-specific directory:
     template_dir <- file.path(example_dir, template)
     fs::dir_create(template_dir)

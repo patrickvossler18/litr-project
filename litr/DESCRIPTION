@@ -13,6 +13,7 @@ RoxygenNote: 7.2.1
 Imports: 
     devtools,
     digest,
+    dplyr,
     fs,
     knitr,
     pkgload,
@@ -26,4 +27,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 LitrVersionUsed: 0.0.3
-LitrId: 0893a57e9fb91c1d6dd0e72448f294d0
+LitrId: 869d2a081766cb6123a2917f82d7776c

@@ -633,11 +633,13 @@ do a bit of work to remove that if it appears in the code chunk.</p>
 add those packages to the <code>Imports</code> section of the
 <code>DESCRIPTION</code> file:</p>
 <pre class="r"><code>usethis::use_package(&quot;stringr&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;stringr&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `stringr::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;stringr&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`stringr::fun()`</span>
+</code></pre>
 <pre class="r"><code>usethis::use_package(&quot;usethis&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;usethis&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `usethis::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;usethis&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`usethis::fun()`</span>
+</code></pre>
 <p>The code also calls the function <code><a href='#do_not_edit_message'>do_not_edit_message</a>()</code>,
 which adds a line at the top of the files sent to the R package
 reminding the user that these are not source files to be edited but
@@ -751,7 +753,8 @@ Tests for <code><a href='#add_text_to_file'>add_text_to_file</a>()</code>.
                          readLines(myfile))
   fs::dir_delete(dir)
 })</code></pre>
-<pre><code>## Test passed 😀</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">Test passed</span> 😀
+</code></pre>
 </details>
 <p><br></p>
 </div>
@@ -898,11 +901,13 @@ prompts the user with concerns about nested projects.</p>
 <p>The code in this section used the <code>fs</code> and
 <code>knitr</code> packages, so we import those:</p>
 <pre class="r"><code>usethis::use_package(&quot;fs&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;fs&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `fs::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;fs&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`fs::fun()`</span>
+</code></pre>
 <pre class="r"><code>usethis::use_package(&quot;knitr&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;knitr&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `knitr::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;knitr&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`knitr::fun()`</span>
+</code></pre>
 </div>
 </div>
 <div id="hash" class="section level3">
@@ -948,8 +953,9 @@ hashing.</p>
 }</code></pre>
 <p>We used <code>digest</code>, so let’s import it:</p>
 <pre class="r"><code>usethis::use_package(&quot;digest&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;digest&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `digest::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;digest&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`digest::fun()`</span>
+</code></pre>
 <p>We will store this hash in a special field within the DESCRIPTION
 file. Let’s call this field <code>LitrId</code>. However, in case we
 ever decide to change the name of this field, it’s better that we only
@@ -1055,8 +1061,9 @@ mention the generating .Rmd file.</p>
 }</code></pre>
 <p>We used <code>devtools</code>, so let’s import it:</p>
 <pre class="r"><code>usethis::use_package(&quot;devtools&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;devtools&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `devtools::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;devtools&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`devtools::fun()`</span>
+</code></pre>
 </div>
 <div id="defining-litrrender" class="section level4">
 <h4>Defining <code>litr::<a href='#render'>render</a>()</code></h4>
@@ -1211,8 +1218,9 @@ Tests to make sure we remove temporary files on errors
 <p><br><br></p>
 <p>We used <code>xfun</code>, so let’s import it:</p>
 <pre class="r"><code>usethis::use_package(&quot;xfun&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;xfun&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `xfun::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;xfun&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`xfun::fun()`</span>
+</code></pre>
 <p>As described earlier, the function <code><a href='#get_params_used'>get_params_used</a>()</code>
 combines the parameters from the YAML but allows for those values to be
 overridden through arguments passed to <code><a href='#render'>render</a>()</code>.</p>
@@ -1231,8 +1239,9 @@ overridden through arguments passed to <code><a href='#render'>render</a>()</cod
 }</code></pre>
 <p>We used the package <code>rmarkdown</code>, so let’s import it:</p>
 <pre class="r"><code>usethis::use_package(&quot;rmarkdown&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;rmarkdown&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `rmarkdown::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;rmarkdown&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`rmarkdown::fun()`</span>
+</code></pre>
 <div id="displaying-chunks-embedded-within-a-chunk" class="section level5">
 <h5>Displaying chunks embedded within a chunk</h5>
 <p><code>knitr</code> allows code chunks to be nested within each other,
@@ -1404,8 +1413,9 @@ of the chunk to be run, but not included in the knitted document.</p>
 }</code></pre>
 <p>We used <code>purrr</code>, so let’s import it:</p>
 <pre class="r"><code>usethis::use_package(&quot;purrr&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;purrr&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `purrr::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;purrr&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`purrr::fun()`</span>
+</code></pre>
 <pre class="r"><code>#&#39; Get a list of code chunks from an Rmd file in vector form
 #&#39; 
 #&#39; @param rmd_vector A character vector of an Rmd file that has been split by new lines
@@ -1752,11 +1762,13 @@ file really matches the initial version created without the
 package.</strong></p>
 <pre class="r"><code>library(magrittr)
 library(purrr)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;purrr&#39;</code></pre>
-<pre><code>## The following object is masked from &#39;package:magrittr&#39;:
+<pre class="r-output"><code>## 
+## Attaching package: &#39;purrr&#39;
+</code></pre>
+<pre class="r-output"><code>## The following object is masked from &#39;package:magrittr&#39;:
 ## 
-##     set_names</code></pre>
+##     set_names
+</code></pre>
 <pre class="r"><code>rfiles &lt;- fs::dir_ls(&quot;R&quot;)
 code &lt;- rfiles %&gt;%
   map(readLines) %&gt;%
@@ -1809,9 +1821,10 @@ function:</p>
   template_description = &quot;Template for an Rmd file for writing an R package using literate programming.&quot;,
   template_create_dir = FALSE
 )</code></pre>
-<pre><code>## ✔ Creating &#39;inst/rmarkdown/templates/make-an-r-package/skeleton/&#39;
-## ✔ Writing &#39;inst/rmarkdown/templates/make-an-r-package/template.yaml&#39;
-## ✔ Writing &#39;inst/rmarkdown/templates/make-an-r-package/skeleton/skeleton.Rmd&#39;</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Creating <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package/skeleton/&#39;</span>
+## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package/template.yaml&#39;</span>
+## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package/skeleton/skeleton.Rmd&#39;</span>
+</code></pre>
 <pre class="r"><code>fs::file_copy(
   path = file.path(
     &quot;..&quot;, &quot;litr-source-files&quot;, &quot;make-an-r-package&quot;, &quot;skeleton.Rmd&quot;
@@ -1828,9 +1841,10 @@ function:</p>
   template_description = &quot;Template for an Rmd file for writing an R package with a dataset using literate programming.&quot;,
   template_create_dir = FALSE
 )</code></pre>
-<pre><code>## ✔ Creating &#39;inst/rmarkdown/templates/make-an-r-package-with-data/skeleton/&#39;
-## ✔ Writing &#39;inst/rmarkdown/templates/make-an-r-package-with-data/template.yaml&#39;
-## ✔ Writing &#39;inst/rmarkdown/templates/make-an-r-package-with-data/skeleton/skeleton.Rmd&#39;</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Creating <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package-with-data/skeleton/&#39;</span>
+## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package-with-data/template.yaml&#39;</span>
+## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package-with-data/skeleton/skeleton.Rmd&#39;</span>
+</code></pre>
 <pre class="r"><code>fs::file_copy(
   path = file.path(
     &quot;..&quot;, &quot;litr-source-files&quot;, &quot;make-an-r-package-with-data&quot;, &quot;skeleton.Rmd&quot;
@@ -1848,9 +1862,10 @@ function:</p>
   template_description = &quot;Template for an Rmd file for writing an R package that makes use of Rcpp while using literate programming.&quot;,
   template_create_dir = FALSE
 )</code></pre>
-<pre><code>## ✔ Creating &#39;inst/rmarkdown/templates/make-an-r-package-with-rcpp/skeleton/&#39;
-## ✔ Writing &#39;inst/rmarkdown/templates/make-an-r-package-with-rcpp/template.yaml&#39;
-## ✔ Writing &#39;inst/rmarkdown/templates/make-an-r-package-with-rcpp/skeleton/skeleton.Rmd&#39;</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Creating <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package-with-rcpp/skeleton/&#39;</span>
+## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package-with-rcpp/template.yaml&#39;</span>
+## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package-with-rcpp/skeleton/skeleton.Rmd&#39;</span>
+</code></pre>
 <pre class="r"><code>fs::file_copy(
   path = file.path(
     &quot;..&quot;, &quot;litr-source-files&quot;, &quot;make-an-r-package-with-rcpp&quot;, &quot;skeleton.Rmd&quot;
@@ -1868,9 +1883,10 @@ references to help explain a function works:</p>
   template_description = &quot;Template for an Rmd file for writing an R package that makes use of chunk references for explaining a function in the style of literate programming.&quot;,
   template_create_dir = FALSE
 )</code></pre>
-<pre><code>## ✔ Creating &#39;inst/rmarkdown/templates/make-an-r-package-with-chunk-references/skeleton/&#39;
-## ✔ Writing &#39;inst/rmarkdown/templates/make-an-r-package-with-chunk-references/template.yaml&#39;
-## ✔ Writing &#39;inst/rmarkdown/templates/make-an-r-package-with-chunk-references/skeleton/skeleton.Rmd&#39;</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Creating <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package-with-chunk-references/skeleton/&#39;</span>
+## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package-with-chunk-references/template.yaml&#39;</span>
+## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;inst/rmarkdown/templates/make-an-r-package-with-chunk-references/skeleton/skeleton.Rmd&#39;</span>
+</code></pre>
 <pre class="r"><code>fs::file_copy(
   path = file.path(
     &quot;..&quot;, &quot;litr-source-files&quot;, &quot;make-an-r-package-with-chunk-references&quot;, &quot;skeleton.Rmd&quot;
@@ -1886,10 +1902,11 @@ references to help explain a function works:</p>
 <p>We include a <code>README.Rmd</code> and then generate the
 <code>README.md</code> based on it:</p>
 <pre class="r"><code>usethis::use_readme_rmd(open = FALSE)</code></pre>
-<pre><code>## ✔ Writing &#39;README.Rmd&#39;
-## ✔ Adding &#39;^README\\.Rmd$&#39; to &#39;.Rbuildignore&#39;
-## ✔ Creating &#39;.git/hooks/&#39;
-## ✔ Writing &#39;.git/hooks/pre-commit&#39;</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;README.Rmd&#39;</span>
+## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;^README\\.Rmd$&#39;</span> to <span style="color: #0000BB;">&#39;.Rbuildignore&#39;</span>
+## <span style="color: #00BB00;">✔</span> Creating <span style="color: #0000BB;">&#39;.git/hooks/&#39;</span>
+## <span style="color: #00BB00;">✔</span> Writing <span style="color: #0000BB;">&#39;.git/hooks/pre-commit&#39;</span>
+</code></pre>
 <pre class="r"><code>fs::file_copy(
   path = file.path(&quot;..&quot;, &quot;litr-source-files&quot;, &quot;README.Rmd&quot;), 
   new_path = &quot;README.Rmd&quot;, 
@@ -1902,7 +1919,8 @@ xfun::Rscript_call(
     output_options = list(html_preview = &quot;false&quot;)
     )
   )</code></pre>
-<pre><code>## [1] &quot;/Users/patrick/litr-project/litr/README.md&quot;</code></pre>
+<pre class="r-output"><code>## [1] &quot;/Users/patrick/litr-project/litr/README.md&quot;
+</code></pre>
 </div>
 <div id="tests" class="section level2">
 <h2>Defining some tests</h2>
@@ -1949,7 +1967,7 @@ testing <code>litr</code>:</p>
 #&#39; 
 #&#39; Typical values for `install_old` could be
 #&#39; - `function() devtools::install(&quot;[location of old version]&quot;)`
-#&#39; - `function() remotes::install_github(&quot;jacobbien/litr-project@*release&quot;, subdir = &quot;litr&quot;)`.
+#&#39; - `function() remotes::install_github(&quot;jacobbien/litr-project@*release&quot;, subdir = &quot;litr&quot;)`
 #&#39; 
 #&#39; @param install_old A function that when run will install the old version
 #&#39; @param location_of_new Path to the new package directory
@@ -1959,15 +1977,41 @@ testing <code>litr</code>:</p>
   # need this to handle devtools::install&#39;s switch to using pkgload::unregister
   # instead of pkgload::unload devtools@v2.4.4
   pkgload::unload(&quot;litr&quot;)
-  out &lt;- devtools::test(location_of_new)
+  raw_test_results &lt;- devtools::test(location_of_new, reporter = testthat::ListReporter)
+  
+  
+  
+  test_results_parsed &lt;- raw_test_results |&gt;
+  dplyr::as_tibble() |&gt;
+  dplyr::rename(Test = test) |&gt;
+  dplyr::group_by(file, context, Test) |&gt;
+  dplyr::summarise(NumTests = dplyr::first(nb),
+            Passed   = sum(passed),
+            Failed   = sum(failed),
+            Warnings = sum(warning),
+            Errors   = sum(as.numeric(error)),
+            Skipped  = sum(as.numeric(skipped)),
+            .groups = &quot;drop&quot;)
+  # out &lt;- test_results_parsed %&gt;% dplyr::summarise_if(is.numeric, sum)
+  test_results_nested &lt;- test_results_parsed |&gt;
+  dplyr::nest_by(file, context, .key = &quot;Results&quot;) |&gt;
+  dplyr::nest_by(file, .key = &quot;Categories&quot;)
+  
   <a href='#install_old'>install_old</a>()
-  return(out)
+  
+  return(test_results_nested)
 }</code></pre>
 <p>We need to use <code>pkgload</code> to avoid a bug caused by how
-<code>devtools::install</code> unloads a package.</p>
+<code>devtools::install</code> unloads a package and we use
+<code>dplyr</code> for parsing the test output.</p>
 <pre class="r"><code>usethis::use_package(&quot;pkgload&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;pkgload&#39; to Imports field in DESCRIPTION
-## • Refer to functions with `pkgload::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;pkgload&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`pkgload::fun()`</span>
+</code></pre>
+<pre class="r"><code>usethis::use_package(&quot;dplyr&quot;)</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;dplyr&#39;</span> to <span style="color: #00BB00;">Imports</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Refer to functions with <span style="color: #555555;">`dplyr::fun()`</span>
+</code></pre>
 <div id="test-check-unedited" class="section level3">
 <h3>Testing <code><a href='#check_unedited'>check_unedited</a>()</code></h3>
 <p>For our tests, we create a temporary directory (which we delete at
@@ -2128,9 +2172,10 @@ sure it behaves how we expect it to:</p>
 we’ll add it as a “Suggests” package since it would be required for
 running the above test.</p>
 <pre class="r"><code>usethis::use_package(&quot;Rcpp&quot;, type = &quot;Suggests&quot;)</code></pre>
-<pre><code>## ✔ Adding &#39;Rcpp&#39; to Suggests field in DESCRIPTION
-## • Use `requireNamespace(&quot;Rcpp&quot;, quietly = TRUE)` to test if package is installed
-## • Then directly refer to functions with `Rcpp::fun()`</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BB00;">✔</span> Adding <span style="color: #0000BB;">&#39;Rcpp&#39;</span> to <span style="color: #00BB00;">Suggests</span> field in DESCRIPTION
+## <span style="color: #BB0000;">•</span> Use <span style="color: #555555;">`requireNamespace(&quot;Rcpp&quot;, quietly = TRUE)`</span> to test if package is installed
+## <span style="color: #BB0000;">•</span> Then directly refer to functions with <span style="color: #555555;">`Rcpp::fun()`</span>
+</code></pre>
 </div>
 </div>
 <div id="documenting-the-package-and-testing" class="section level2">
@@ -2144,63 +2189,148 @@ neatly.</strong></p>
 # instead of pkgload::unload as of devtools@v2.4.4
 # rm(list = ls())
 litr::<a href='#document'>document</a>()</code></pre>
-<pre><code>## ℹ Updating litr documentation
-## ℹ Loading litr
-## Writing &#39;NAMESPACE&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;hash_package_directory&#39;)hash_package_directory.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;description_litr_hash_field_name&#39;)description_litr_hash_field_name.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;write_hash_to_description&#39;)write_hash_to_description.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;read_hash_from_description&#39;)read_hash_from_description.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;check_unedited&#39;)check_unedited.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;litr-package&#39;)litr-package.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;render&#39;)render.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;add_function_hyperlinks&#39;)add_function_hyperlinks.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;add_chunk_label_hyperlinks&#39;)add_chunk_label_hyperlinks.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;find_labels&#39;)find_labels.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;replace_label_delimiter&#39;)replace_label_delimiter.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;preprocess_chunk_labels&#39;)preprocess_chunk_labels.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;extract_rmd_code_chunks&#39;)extract_rmd_code_chunks.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;extract_label&#39;)extract_label.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;modify_chunk_label&#39;)modify_chunk_label.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;get_params_used&#39;)get_params_used.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;do_not_edit_message&#39;)do_not_edit_message.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;description_litr_version_field_name&#39;)description_litr_version_field_name.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;write_version_to_description&#39;)write_version_to_description.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;document&#39;)document.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;setup&#39;)setup.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;make_noticeable&#39;)make_noticeable.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;send_to_package&#39;)send_to_package.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;add_text_to_file&#39;)add_text_to_file.Rd]8;;&#39;
-## Writing &#39;]8;;ide:run:pkgload::dev_help(&#39;test_litr&#39;)test_litr.Rd]8;;&#39;</code></pre>
+<pre class="r-output"><code>## <span style="color: #00BBBB;">ℹ</span> Updating <span style="color: #0000BB;">litr</span> documentation
+## <span style="color: #00BBBB;">ℹ</span> Loading <span style="color: #0000BB;">litr</span>
+## Writing <span style="color: #0000BB;">NAMESPACE</span>
+## Writing <a href="ide:run:pkgload::dev_help(" hash_package_directory')'><span style="color: #0000BB;">hash_package_directory.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" description_litr_hash_field_name')'><span style="color: #0000BB;">description_litr_hash_field_name.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" write_hash_to_description')'><span style="color: #0000BB;">write_hash_to_description.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" read_hash_from_description')'><span style="color: #0000BB;">read_hash_from_description.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" check_unedited')'><span style="color: #0000BB;">check_unedited.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" litr-package')'><span style="color: #0000BB;">litr-package.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" render')'><span style="color: #0000BB;">render.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" add_function_hyperlinks')'><span style="color: #0000BB;">add_function_hyperlinks.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" add_chunk_label_hyperlinks')'><span style="color: #0000BB;">add_chunk_label_hyperlinks.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" find_labels')'><span style="color: #0000BB;">find_labels.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" replace_label_delimiter')'><span style="color: #0000BB;">replace_label_delimiter.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" preprocess_chunk_labels')'><span style="color: #0000BB;">preprocess_chunk_labels.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" extract_rmd_code_chunks')'><span style="color: #0000BB;">extract_rmd_code_chunks.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" extract_label')'><span style="color: #0000BB;">extract_label.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" modify_chunk_label')'><span style="color: #0000BB;">modify_chunk_label.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" get_params_used')'><span style="color: #0000BB;">get_params_used.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" do_not_edit_message')'><span style="color: #0000BB;">do_not_edit_message.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" description_litr_version_field_name')'><span style="color: #0000BB;">description_litr_version_field_name.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" write_version_to_description')'><span style="color: #0000BB;">write_version_to_description.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" document')'><span style="color: #0000BB;">document.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" setup')'><span style="color: #0000BB;">setup.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" make_noticeable')'><span style="color: #0000BB;">make_noticeable.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" send_to_package')'><span style="color: #0000BB;">send_to_package.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" add_text_to_file')'><span style="color: #0000BB;">add_text_to_file.Rd</span></a>
+## Writing <a href="ide:run:pkgload::dev_help(" test_litr')'><span style="color: #0000BB;">test_litr.Rd</span></a>
+</code></pre>
 <pre class="r"><code><span id='install_old'>install_old</span> &lt;- function() {
   remotes::install_github(&quot;jacobbien/litr-project@*release&quot;, subdir = &quot;litr&quot;)
 }
-xfun::Rscript_call(test_litr,
-                   list(install_old = install_old, location_of_new = &quot;.&quot;))</code></pre>
-<pre><code>##      file context                                      test nb failed skipped
-## 1 tests.R   tests                  <a href='#add_text_to_file'>add_text_to_file</a>() works 10      0   FALSE
-## 2 tests.R   tests             We remove _TMP files on error  2      0   FALSE
-## 3 tests.R   tests preprocess_chunk_labels works as expected  4      0   FALSE
-## 4 tests.R   tests extract_rmd_code_chunks works as expected  6      0   FALSE
-## 5 tests.R   tests                      check_unedited works 11      0   FALSE
-## 6 tests.R   tests                     get_params_used works  3      0   FALSE
-## 7 tests.R   tests                     templates can be knit  6      0   FALSE
-##   error warning  user system   real passed
-## 1 FALSE       0 0.039  0.002  0.041     10
-## 2 FALSE       0 0.026  0.003  0.992      2
-## 3 FALSE       0 0.021  0.000  0.022      4
-## 4 FALSE       0 0.013  0.000  0.014      6
-## 5 FALSE       0 0.061  0.010  1.181     11
-## 6 FALSE       0 0.005  0.001  0.006      3
-## 7 FALSE       0 5.425  0.136 15.268      6
-##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               result
-## 1 , 10, 3, 10, 77, 3, 77, 10, 10, testthat::expect_error(<a href='#add_text_to_file'>add_text_to_file</a>(sometxt, myfile, req_exist = TRUE)), expect_condition_matching(&quot;error&quot;, {,     {,         object,     }, }, regexp = regexp, class = class, ..., inherit = inherit, info = info, ,     label = label), quasi_capture(enquo(object), label, capture_matching_condition, ,     matches = matcher), .capture(act$val &lt;- eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), ,     ...), withCallingHandlers(expr, condition = function(cnd) {,     if (!is.null(matched) || !matches(cnd)) {,         return(),     },     if (can_entrace(cnd)) {,         cnd &lt;- cnd_entrace(cnd),     },     matched &lt;&lt;- cnd,     if (inherits(cnd, &quot;message&quot;) || inherits(cnd, &quot;warning&quot;)) {,         cnd_muffle(cnd),     },     else if (inherits(cnd, &quot;error&quot;) || inherits(cnd, &quot;skip&quot;)) {,         return_from(tl, cnd),     }, }), eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), <a href='#add_text_to_file'>add_text_to_file</a>(sometxt, myfile, req_exist = TRUE), 0, 1, 2, 3, 4, 3, 0, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, testthat, testthat, testthat, testthat, base, rlang, litr, ::, :::, :::, local, ::, ::, ::, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works, fs::file_exists(myfile) is not TRUE\n\n, 16, 3, 16, 48, 3, 48, 16, 16, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works, `sometxt` (`actual`) not equal to readLines(myfile) (`expected`).\n\n, 17, 3, 17, 52, 3, 52, 17, 17, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works, c(sometxt, moretxt) (`actual`) not equal to readLines(myfile) (`expected`).\n\n, 22, 3, 22, 64, 3, 64, 22, 22, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works, , 25, 3, 25, 62, 3, 62, 25, 25, testthat::expect_error(<a href='#add_text_to_file'>add_text_to_file</a>(sometxt, myfile, 0)), expect_condition_matching(&quot;error&quot;, {,     {,         object,     }, }, regexp = regexp, class = class, ..., inherit = inherit, info = info, ,     label = label), quasi_capture(enquo(object), label, capture_matching_condition, ,     matches = matcher), .capture(act$val &lt;- eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), ,     ...), withCallingHandlers(expr, condition = function(cnd) {,     if (!is.null(matched) || !matches(cnd)) {,         return(),     },     if (can_entrace(cnd)) {,         cnd &lt;- cnd_entrace(cnd),     },     matched &lt;&lt;- cnd,     if (inherits(cnd, &quot;message&quot;) || inherits(cnd, &quot;warning&quot;)) {,         cnd_muffle(cnd),     },     else if (inherits(cnd, &quot;error&quot;) || inherits(cnd, &quot;skip&quot;)) {,         return_from(tl, cnd),     }, }), eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), <a href='#add_text_to_file'>add_text_to_file</a>(sometxt, myfile, 0), 0, 1, 2, 3, 4, 3, 0, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, testthat, testthat, testthat, testthat, base, rlang, litr, ::, :::, :::, local, ::, ::, ::, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works, , 26, 3, 26, 63, 3, 63, 26, 26, testthat::expect_error(<a href='#add_text_to_file'>add_text_to_file</a>(sometxt, myfile, -1)), expect_condition_matching(&quot;error&quot;, {,     {,         object,     }, }, regexp = regexp, class = class, ..., inherit = inherit, info = info, ,     label = label), quasi_capture(enquo(object), label, capture_matching_condition, ,     matches = matcher), .capture(act$val &lt;- eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), ,     ...), withCallingHandlers(expr, condition = function(cnd) {,     if (!is.null(matched) || !matches(cnd)) {,         return(),     },     if (can_entrace(cnd)) {,         cnd &lt;- cnd_entrace(cnd),     },     matched &lt;&lt;- cnd,     if (inherits(cnd, &quot;message&quot;) || inherits(cnd, &quot;warning&quot;)) {,         cnd_muffle(cnd),     },     else if (inherits(cnd, &quot;error&quot;) || inherits(cnd, &quot;skip&quot;)) {,         return_from(tl, cnd),     }, }), eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), <a href='#add_text_to_file'>add_text_to_file</a>(sometxt, myfile, -1), 0, 1, 2, 3, 4, 3, 0, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, testthat, testthat, testthat, testthat, base, rlang, litr, ::, :::, :::, local, ::, ::, ::, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works, , 27, 3, 27, 62, 3, 62, 27, 27, testthat::expect_error(<a href='#add_text_to_file'>add_text_to_file</a>(sometxt, myfile, 5)), expect_condition_matching(&quot;error&quot;, {,     {,         object,     }, }, regexp = regexp, class = class, ..., inherit = inherit, info = info, ,     label = label), quasi_capture(enquo(object), label, capture_matching_condition, ,     matches = matcher), .capture(act$val &lt;- eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), ,     ...), withCallingHandlers(expr, condition = function(cnd) {,     if (!is.null(matched) || !matches(cnd)) {,         return(),     },     if (can_entrace(cnd)) {,         cnd &lt;- cnd_entrace(cnd),     },     matched &lt;&lt;- cnd,     if (inherits(cnd, &quot;message&quot;) || inherits(cnd, &quot;warning&quot;)) {,         cnd_muffle(cnd),     },     else if (inherits(cnd, &quot;error&quot;) || inherits(cnd, &quot;skip&quot;)) {,         return_from(tl, cnd),     }, }), eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), <a href='#add_text_to_file'>add_text_to_file</a>(sometxt, myfile, 5), 0, 1, 2, 3, 4, 3, 0, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, testthat, testthat, testthat, testthat, base, rlang, litr, ::, :::, :::, local, ::, ::, ::, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works, c(moretxt2, sometxt, moretxt) (`actual`) not equal to readLines(myfile) (`expected`).\n\n, 32, 3, 32, 74, 3, 74, 32, 32, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works, c(moretxt2, moretxt3, sometxt, moretxt) (`actual`) not equal to readLines(myfile) (`expected`).\n\n, 37, 3, 38, 43, 3, 43, 37, 38, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works, c(moretxt2, moretxt3, sometxt, moretxt, moretxt4) (`actual`) not equal to readLines(myfile) (`expected`).\n\n, 43, 3, 44, 43, 3, 43, 43, 44, 45, 47, <a href='#add_text_to_file'>add_text_to_file</a>() works
-## 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         , 59, 3, 59, 116, 3, 116, 59, 59, testthat::expect_error(litr::<a href='#render'>render</a>(rmd_file), regexp = &quot;Failed to run &#39;render_&#39; in a new R session.&quot;, ,     fixed = TRUE), expect_condition_matching(&quot;error&quot;, {,     {,         object,     }, }, regexp = regexp, class = class, ..., inherit = inherit, info = info, ,     label = label), quasi_capture(enquo(object), label, capture_matching_condition, ,     matches = matcher), .capture(act$val &lt;- eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), ,     ...), withCallingHandlers(expr, condition = function(cnd) {,     if (!is.null(matched) || !matches(cnd)) {,         return(),     },     if (can_entrace(cnd)) {,         cnd &lt;- cnd_entrace(cnd),     },     matched &lt;&lt;- cnd,     if (inherits(cnd, &quot;message&quot;) || inherits(cnd, &quot;warning&quot;)) {,         cnd_muffle(cnd),     },     else if (inherits(cnd, &quot;error&quot;) || inherits(cnd, &quot;skip&quot;)) {,         return_from(tl, cnd),     }, }), eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), litr::<a href='#render'>render</a>(rmd_file), tryCatch({,     xfun::Rscript_call(render_, c(input = modified_input, args)), }, error = function(cond) {,     tmp_files &lt;- fs::dir_ls(file.path(dirname(input)), regexp = stringr::str_replace(fs::path_file(input), ,         &quot;.(Rmd|rmd|RMD)&quot;, &quot;_TMP.\\\\1&quot;)),     if (length(tmp_files) &gt; 0) {,         fs::file_delete(tmp_files),     },     stop(cond), }), tryCatchList(expr, classes, parentenv, handlers), tryCatchOne(expr, names, parentenv, handlers[[1L]]), value[[3L]](cond), 0, 1, 2, 3, 4, 3, 0, 7, 8, 9, 10, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, testthat, testthat, testthat, testthat, base, rlang, litr, base, base, base, NA, ::, :::, :::, local, ::, ::, ::, ::, local, local, NA, 45, 47, We remove _TMP files on error, length(leftover_files) == 0 is not TRUE\n\n, 62, 3, 62, 52, 3, 52, 62, 62, 45, 47, We remove _TMP files on error
-## 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <a href='#preprocess_chunk_labels'>preprocess_chunk_labels</a>(no_chunks) (`actual`) not equal to `no_chunks` (`expected`).\n\n, 79, 3, 79, 71, 3, 71, 79, 79, 45, 47, preprocess_chunk_labels works as expected, <a href='#preprocess_chunk_labels'>preprocess_chunk_labels</a>(no_reference) (`actual`) not equal to `no_reference` (`expected`).\n\n, 80, 3, 80, 77, 3, 77, 80, 80, 45, 47, preprocess_chunk_labels works as expected, <a href='#preprocess_chunk_labels'>preprocess_chunk_labels</a>(one_reference) (`actual`) not equal to unlist(...) (`expected`).\n\n, 83, 3, 83, 353, 3, 353, 83, 83, 45, 47, preprocess_chunk_labels works as expected, , 86, 3, 86, 168, 3, 168, 86, 86, testthat::expect_error(<a href='#preprocess_chunk_labels'>preprocess_chunk_labels</a>(missing_ref_chunk), ,     &quot;Unable to find the following chunk reference(s) in this Rmarkdown file: convert-c2f.&quot;, ,     fixed = TRUE), expect_condition_matching(&quot;error&quot;, {,     {,         object,     }, }, regexp = regexp, class = class, ..., inherit = inherit, info = info, ,     label = label), quasi_capture(enquo(object), label, capture_matching_condition, ,     matches = matcher), .capture(act$val &lt;- eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), ,     ...), withCallingHandlers(expr, condition = function(cnd) {,     if (!is.null(matched) || !matches(cnd)) {,         return(),     },     if (can_entrace(cnd)) {,         cnd &lt;- cnd_entrace(cnd),     },     matched &lt;&lt;- cnd,     if (inherits(cnd, &quot;message&quot;) || inherits(cnd, &quot;warning&quot;)) {,         cnd_muffle(cnd),     },     else if (inherits(cnd, &quot;error&quot;) || inherits(cnd, &quot;skip&quot;)) {,         return_from(tl, cnd),     }, }), eval_bare(quo_get_expr(.quo), quo_get_env(.quo)), <a href='#preprocess_chunk_labels'>preprocess_chunk_labels</a>(missing_ref_chunk), 0, 1, 2, 3, 4, 3, 0, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, testthat, testthat, testthat, testthat, base, rlang, litr, ::, :::, :::, local, ::, ::, ::, 45, 47, preprocess_chunk_labels works as expected
-## 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <a href='#extract_rmd_code_chunks'>extract_rmd_code_chunks</a>(no_chunks) (`actual`) not equal to list() (`expected`).\n\n, 94, 3, 94, 68, 3, 68, 94, 94, 45, 47, extract_rmd_code_chunks works as expected, `no_reference_chunk_idx` (`actual`) not equal to c(FALSE, FALSE) (`expected`).\n\n, 100, 3, 100, 65, 3, 65, 100, 100, 45, 47, extract_rmd_code_chunks works as expected, `no_reference_chunk_ids` (`actual`) not equal to c(0, 0) (`expected`).\n\n, 101, 3, 101, 57, 3, 57, 101, 101, 45, 47, extract_rmd_code_chunks works as expected, `mini_example_chunk_idx` (`actual`) not equal to c(FALSE, TRUE, FALSE) (`expected`).\n\n, 109, 3, 109, 71, 3, 71, 109, 109, 45, 47, extract_rmd_code_chunks works as expected, `mini_example_chunk_ids` (`actual`) not equal to c(0, 2, 0) (`expected`).\n\n, 110, 3, 110, 60, 3, 60, 110, 110, 45, 47, extract_rmd_code_chunks works as expected, `mini_example_chunk_labels` (`actual`) not equal to c(&quot;setup&quot;, &quot;c2f&quot;, &quot;check-arg&quot;) (`expected`).\n\n, 111, 3, 111, 83, 3, 83, 111, 111, 45, 47, extract_rmd_code_chunks works as expected
-## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <a href='#check_unedited'>check_unedited</a>(package_path) is not TRUE\n\n, 127, 3, 127, 53, 3, 53, 127, 127, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not FALSE\n\n, 132, 3, 132, 54, 3, 54, 132, 132, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not TRUE\n\n, 136, 3, 136, 53, 3, 53, 136, 136, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not FALSE\n\n, 141, 3, 141, 54, 3, 54, 141, 141, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not TRUE\n\n, 144, 3, 144, 53, 3, 53, 144, 144, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not FALSE\n\n, 151, 3, 151, 54, 3, 54, 151, 151, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not TRUE\n\n, 154, 3, 154, 53, 3, 53, 154, 154, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not FALSE\n\n, 162, 3, 162, 54, 3, 54, 162, 162, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not TRUE\n\n, 165, 3, 165, 53, 3, 53, 165, 165, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not FALSE\n\n, 173, 3, 173, 54, 3, 54, 173, 173, 45, 47, check_unedited works, <a href='#check_unedited'>check_unedited</a>(package_path) is not TRUE\n\n, 176, 3, 176, 53, 3, 53, 176, 176, 45, 47, check_unedited works
-## 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   `default_params` (`actual`) not equal to rmarkdown::yaml_front_matter(rmd_file)$params (`expected`).\n\n, 189, 3, 192, 3, 3, 3, 189, 192, 45, 47, get_params_used works, <a href='#get_params_used'>get_params_used</a>(rmd_file, passed_params = list(package_parent_dir = &quot;dir&quot;)) (`actual`) not equal to `params1` (`expected`).\n\n, 195, 3, 198, 3, 3, 3, 195, 198, 45, 47, get_params_used works, <a href='#get_params_used'>get_params_used</a>(...) (`actual`) not equal to `params2` (`expected`).\n\n, 202, 3, 207, 3, 3, 3, 202, 207, 45, 47, get_params_used works
-## 7                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 fs::file_exists(file.path(dir, &quot;create-rhello.html&quot;)) is not TRUE\n\n, 222, 3, 222, 78, 3, 78, 222, 222, 45, 47, templates can be knit, fs::file_exists(file.path(dir, &quot;rhello&quot;)) is not TRUE\n\n, 223, 3, 223, 66, 3, 66, 223, 223, 45, 47, templates can be knit, fs::file_exists(file.path(dir, &quot;create-rhasdata.html&quot;)) is not TRUE\n\n, 231, 3, 231, 80, 3, 80, 231, 231, 45, 47, templates can be knit, fs::file_exists(file.path(dir, &quot;rhasdata&quot;)) is not TRUE\n\n, 232, 3, 232, 68, 3, 68, 232, 232, 45, 47, templates can be knit, fs::file_exists(file.path(dir, &quot;create-withrcpp.html&quot;)) is not TRUE\n\n, 240, 3, 240, 80, 3, 80, 240, 240, 45, 47, templates can be knit, fs::file_exists(file.path(dir, &quot;withrcpp&quot;)) is not TRUE\n\n, 241, 3, 241, 68, 3, 68, 241, 241, 45, 47, templates can be knit</code></pre>
+# we need to do some work to parse the test results
+<span id='write_cat_results'>write_cat_results</span> &lt;- function(category, tests, ...) {
+  cat(&quot;####&quot;, category, &quot;\n&quot;)
+  print(knitr::kable(tests))
+}
+<span id='write_file_results'>write_file_results</span> &lt;- function(file, categories, ...) {
+  cat(&quot;###&quot;, file, &quot;\n&quot;)
+  purrr::pwalk(list(categories$context, categories$Results), write_cat_results)
+}
+<span id='write_results'>write_results</span> &lt;- function(res) {
+  purrr::pwalk(list(res$file, res$Categories), write_file_results)
+}
+  
+test_results &lt;- xfun::Rscript_call(test_litr,
+                   list(install_old = install_old, location_of_new = &quot;.&quot;))
+
+<a href='#write_results'>write_results</a>(test_results)</code></pre>
+<div id="tests.r" class="section level3">
+<h3>tests.R</h3>
+<div id="section" class="section level4">
+<h4></h4>
+<table>
+<colgroup>
+<col width="48%" />
+<col width="9%" />
+<col width="7%" />
+<col width="7%" />
+<col width="9%" />
+<col width="7%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Test</th>
+<th align="right">NumTests</th>
+<th align="right">Passed</th>
+<th align="right">Failed</th>
+<th align="right">Warnings</th>
+<th align="right">Errors</th>
+<th align="right">Skipped</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href='#add_text_to_file'>add_text_to_file</a>() works</td>
+<td align="right">10</td>
+<td align="right">10</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">check_unedited works</td>
+<td align="right">11</td>
+<td align="right">11</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">extract_rmd_code_chunks works as expected</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">get_params_used works</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">preprocess_chunk_labels works as expected</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">templates can be knit</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">We switch back to the original file on error</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="add-examples-folder-with-the-output-of-knitting-each-example" class="section level2">
 <h2>Add examples folder with the output of knitting each example</h2>
@@ -2223,7 +2353,7 @@ package. These examples are linked to in <code>README.Rmd</code>.</p>
     pkg_name &lt;- rmarkdown::yaml_front_matter(tmp_file)$params$package_name
     rmd_file &lt;- file.path(example_dir, paste0(&quot;create-&quot;, pkg_name, &quot;.Rmd&quot;))
     fs::file_move(tmp_file, rmd_file)
-    litr::<a href='#render'>render</a>(rmd_file)
+    <a href='#render'>render</a>(rmd_file)
     # move to a template-specific directory:
     template_dir &lt;- file.path(example_dir, template)
     fs::dir_create(template_dir)
@@ -2234,7 +2364,8 @@ package. These examples are linked to in <code>README.Rmd</code>.</p>
 }</code></pre>
 <pre class="r"><code>xfun::Rscript_call(build_all_templates,
                    list(install_old = install_old, location_of_new = &quot;.&quot;))</code></pre>
-<pre><code>## [1] &quot;litr&quot;</code></pre>
+<pre class="r-output"><code>## [1] &quot;litr&quot;
+</code></pre>
 </div>
 <div class="footnotes footnotes-end-of-document">
 <hr />
